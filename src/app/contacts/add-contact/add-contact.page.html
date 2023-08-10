@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add a New Contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Add a New Contact</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item>
+      <ion-input 
+        labelPlacement="floating" 
+        label="Enter Name" 
+        placeholder="Enter your Name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        labelPlacement="floating" 
+        type="email"
+        label="Enter Email"
+        placeholder="Enter your Email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        labelPlacement="floating" 
+        type="tel" label="Enter Phone" 
+        placeholder="Enter your Phone"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block">CREATE CONTACT</ion-button>
+
+</ion-content>

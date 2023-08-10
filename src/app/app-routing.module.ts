@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+// routes config
 const routes: Routes = [
   {
     path: 'home',
@@ -11,11 +12,20 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'contacts',
+    loadChildren: () => import('./contacts/contacts.module').then( m => m.ContactsPageModule)
+  }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    // registering the routes
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }) // preloads all modules as quickly as possible.
   ],
   exports: [RouterModule]
 })

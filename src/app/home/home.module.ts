@@ -6,10 +6,9 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
-
 @NgModule({
   imports: [
-    CommonModule,
+    CommonModule, 
     FormsModule,
     IonicModule,
     HomePageRoutingModule

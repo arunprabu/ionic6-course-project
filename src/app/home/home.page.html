@@ -1,20 +1,21 @@
 <ion-header [translucent]="true">
+  <!-- will be visible by default if you do not have other ion-header with condense in ion-content -->
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Contact Manager App+</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="ion-padding">
+    <h1>Contact Manager App+</h1>
+    <img
+      src="https://placehold.jp/3d4070/ffffff/600x400.png?text=..."
+      alt="Contact Manager App!"
+    />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fuga
+      cumque laudantium? Odio esse placeat enim corporis earum modi quod vitae.
+    </p>
+    <ion-button expand="block" 
+      routerLink="/contacts">BROWSE CONTACTS</ion-button>
   </div>
 </ion-content>

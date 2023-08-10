@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 
+// Decorator
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
+  selector: 'app-root', // element-selector
+  templateUrl: 'app.component.html', // html
+  styleUrls: ['app.component.scss'], // css -- optional
 })
 export class AppComponent {
+  // ts
   constructor() {}
 }

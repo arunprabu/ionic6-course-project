@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>John Williams</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="star-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="share-social-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">John Williams</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <img alt="Profile Photo of John Williams" 
+      src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <ion-card-header>
+      <ion-card-title>John Williams</ion-card-title>
+      <ion-card-subtitle>#1</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="mail-outline" slot="start"></ion-icon>
+          <ion-label>j@k.com</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="call-outline" slot="start"></ion-icon>
+          <ion-label>453 4363 3444</ion-label>
+        </ion-item>
+      </ion-list>
+
+      <div class="">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel odio, laborum dolor adipisci soluta modi, fugiat autem libero et quasi doloremque, sint iure praesentium neque dicta velit tempore voluptatibus omnis?
+        </p>
+      </div>
+
+      <ion-button expand="block" color="primary">Update</ion-button>
+      <ion-button expand="block" color="danger" fill="outline">Delete</ion-button>
+     
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

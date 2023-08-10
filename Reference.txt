@@ -1,0 +1,15 @@
+
+Home Feature
+----
+  Slider (3 slides)
+
+Contacts Manager Feature
+---
+  1. list contacts                localhost:8100/contacts
+      contacts    (list of contacts + add button)
+
+  2. create contact               localhost:8100/contacts/add
+  3. fetch contact details        localhost:8100/contacts/1
+  4. update contact               localhost:8100/contacts/1
+  5. delete contact               localhost:8100/contacts/1    (TODO)
+
