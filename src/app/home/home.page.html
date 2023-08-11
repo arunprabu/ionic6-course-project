@@ -5,17 +5,57 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-  <div class="ion-padding">
-    <h1>Contact Manager App+</h1>
-    <img
-      src="https://placehold.jp/3d4070/ffffff/600x400.png?text=..."
-      alt="Contact Manager App!"
-    />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fuga
-      cumque laudantium? Odio esse placeat enim corporis earum modi quod vitae.
-    </p>
-    <ion-button expand="block" 
-      routerLink="/contacts">BROWSE CONTACTS</ion-button>
-  </div>
+
+  <swiper-container class="mySwiper" navigation="true">
+    <swiper-slide>
+      <div class="slide">
+        <img src="https://via.placeholder.com/150/771796" alt="" />
+        <h2>Welcome</h2>
+        <p>
+          The <b>ionic contact manager app</b> is a practical preview of the ionic framework in action, and a
+          demonstration of proper code use.
+        </p>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slide">
+        <img src="https://via.placeholder.com/150/771796" alt="" />
+        <h2>What is Ionic?</h2>
+        <p>
+          <b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps
+          with web technologies like HTML, CSS, and JavaScript.
+        </p>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slide">
+        <img src="https://via.placeholder.com/150/771796" alt="" />
+        <h2>What is Appflow?</h2>
+        <p>
+          <b>Appflow</b> is a powerful set of services and features built on top of Ionic Framework that brings a
+          totally new level of app development agility to mobile dev teams.
+        </p>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slide">
+        <img src="https://via.placeholder.com/150/771796" alt="" />
+        <h2>What is Appflow?</h2>
+        <p>
+          <b>Appflow</b> is a powerful set of services and features built on top of Ionic Framework that brings a
+          totally new level of app development agility to mobile dev teams.
+        </p>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slide">
+        <img src="https://via.placeholder.com/150/771796" alt="" />
+        <h2>Browse Contacts</h2>
+        <ion-button fill="clear" routerLink="/contacts">Continue
+          <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+
 </ion-content>
