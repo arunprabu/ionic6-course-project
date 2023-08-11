@@ -4,7 +4,7 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
 
-    <ion-title>John Williams</ion-title>
+    <ion-title>{{contact?.name}}</ion-title>
 
     <ion-buttons slot="end">
       <ion-button>
@@ -20,39 +20,88 @@
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">John Williams</ion-title>
+      <ion-title size="large">{{contact?.name}}</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-card>
-    <img alt="Profile Photo of John Williams" 
+    <img alt="Profile Photo of {{contact?.name}}" 
       src="https://ionicframework.com/docs/img/demos/card-media.png" />
     <ion-card-header>
-      <ion-card-title>John Williams</ion-card-title>
-      <ion-card-subtitle>#1</ion-card-subtitle>
+      <ion-card-title>{{contact?.name}}</ion-card-title>
+      <ion-card-subtitle>#{{contact?.id}}</ion-card-subtitle>
     </ion-card-header>
   
     <ion-card-content>
       <ion-list>
         <ion-item>
           <ion-icon name="mail-outline" slot="start"></ion-icon>
-          <ion-label>j@k.com</ion-label>
+          <ion-label>{{contact?.email}}</ion-label>
         </ion-item>
 
         <ion-item>
           <ion-icon name="call-outline" slot="start"></ion-icon>
-          <ion-label>453 4363 3444</ion-label>
+          <ion-label>{{contact?.phone}}</ion-label>
         </ion-item>
       </ion-list>
 
-      <div class="">
+      <div class="m-20">
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel odio, laborum dolor adipisci soluta modi, fugiat autem libero et quasi doloremque, sint iure praesentium neque dicta velit tempore voluptatibus omnis?
         </p>
       </div>
 
-      <ion-button expand="block" color="primary">Update</ion-button>
-      <ion-button expand="block" color="danger" fill="outline">Delete</ion-button>
+      <ion-button id="update-modal" expand="block" color="primary">Update</ion-button>
+      <!-- Inline Modal is recommended -- for controller refer Delete contact implementaion -->
+      <ion-modal 
+        trigger="update-modal" 
+        (willDismiss)="handleUpdateWillDismiss($event)"
+        (didPresent)="handleModalOpen()">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-buttons slot="start">
+                <ion-button (click)="handleUpdateCancel()">Cancel</ion-button>
+              </ion-buttons>
+              <ion-title>John Willams</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="handleUpdateConfirm()" [strong]="true">Confirm</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding" *ngIf="updateModalContact">
+            <ion-item>
+              <ion-input 
+                labelPlacement="floating" 
+                type="text" 
+                label="Enter Name" 
+                placeholder="Enter your Name" 
+                [(ngModel)]="updateModalContact.name"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input 
+                labelPlacement="floating" 
+                type="text" 
+                label="Enter Email" 
+                placeholder="Enter your Email"
+                [(ngModel)]="updateModalContact.email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input 
+                labelPlacement="floating" 
+                type="text" 
+                label="Enter Phone" 
+                placeholder="Enter your Phone"
+                [(ngModel)]="updateModalContact.phone"></ion-input>
+            </ion-item>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+
+      <ion-button expand="block" 
+        color="danger" 
+        fill="outline" 
+        (click)="handleDelete()">Delete</ion-button>
      
     </ion-card-content>
   </ion-card>

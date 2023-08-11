@@ -13,3 +13,21 @@ Contacts Manager Feature
   4. update contact               localhost:8100/contacts/1
   5. delete contact               localhost:8100/contacts/1    (TODO)
 
+
+Slider 
+-----
+
+Accessing Device's Native Features
+----
+  1. Access and Save Contacts 
+  2. Camera 
+  3. GPS 
+  4. Send SMS
+  5. Accessing Wi-Fi Network stuff
+
+Hi Arun,
+Please refer below details to login again incase of you moved out of the session
+Session number: 2660 811 2947
+Registration ID: 309906
+Password:	12!@ssaP
+Thank you :)

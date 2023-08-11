@@ -4,12 +4,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+<!--   
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Contacts</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 
   <!-- floating action button -->
   <ion-fab vertical="bottom" horizontal="end">
@@ -19,21 +23,14 @@
   </ion-fab>
 
   <ion-list>
-    <ion-item routerLink="/contacts/1">
+    <ion-item routerLink="/contacts/{{contact.id}}" *ngFor="let contact of contacts">
       <ion-avatar slot="start">
-        <img alt="Profile Photo of John Williams" 
+        <img alt="Profile Photo of {{contact.name}}"
           src="https://ionicframework.com/docs/img/demos/avatar.svg" />
       </ion-avatar>
-      <ion-label>John Williams</ion-label>
+      <ion-label>{{contact.name}}</ion-label>
     </ion-item>
 
-    <ion-item routerLink="/contacts/2">
-      <ion-avatar slot="start">
-        <img alt="Profile Photo of Steve Smith" 
-        src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-      </ion-avatar>
-      <ion-label>Steve Smith</ion-label>
-    </ion-item>
   </ion-list>
 
 </ion-content>

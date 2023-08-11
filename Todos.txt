@@ -1,0 +1,2 @@
+1. Handle error in Add contact and show the error msg in toast 
+2. 

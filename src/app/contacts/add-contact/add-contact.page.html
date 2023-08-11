@@ -19,7 +19,8 @@
       <ion-input 
         labelPlacement="floating" 
         label="Enter Name" 
-        placeholder="Enter your Name"></ion-input>
+        placeholder="Enter your Name" 
+        [formControl]="name"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -27,17 +28,19 @@
         labelPlacement="floating" 
         type="email"
         label="Enter Email"
-        placeholder="Enter your Email"></ion-input>
+        placeholder="Enter your Email" 
+        [formControl]="email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-input 
         labelPlacement="floating" 
         type="tel" label="Enter Phone" 
-        placeholder="Enter your Phone"></ion-input>
+        placeholder="Enter your Phone" 
+        [formControl]="phone"></ion-input>
     </ion-item>
   </ion-list>
 
-  <ion-button expand="block">CREATE CONTACT</ion-button>
+  <ion-button expand="block" (click)="handleCreateContact()">CREATE CONTACT</ion-button>
 
 </ion-content>
