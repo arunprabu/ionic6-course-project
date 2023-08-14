@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactsService } from './contacts.service';
+import { Contacts } from '@capacitor-community/contacts';
 
 @Component({
   selector: 'app-contacts',
@@ -12,7 +13,8 @@ export class ContactsPage implements OnInit {
   constructor(private contactsService: ContactsService) { }
 
   ngOnInit() {
-    this.getContacts();
+    // this.getContacts();
+    this.retrieveListOfContacts();
   }
 
   handleRefresh(event: any){
@@ -31,7 +33,22 @@ export class ContactsPage implements OnInit {
         this.contacts = res;
         // return true;
       });
+    
   }
 
+  async retrieveListOfContacts(){
+    const projection = {
+      // Specify which fields should be retrieved.
+      name: true,
+      phones: true,
+      emails: true
+    };
+
+    const result = await Contacts.getContacts({
+      projection,
+    });
+
+    this.contacts = result.contacts;
+  };
 
 }

@@ -23,12 +23,16 @@
   </ion-fab>
 
   <ion-list>
-    <ion-item routerLink="/contacts/{{contact.id}}" *ngFor="let contact of contacts">
+    <!-- <ion-item routerLink="/contacts/{{contact.id}}" *ngFor="let contact of contacts">
       <ion-avatar slot="start">
         <img alt="Profile Photo of {{contact.name}}"
           src="https://ionicframework.com/docs/img/demos/avatar.svg" />
       </ion-avatar>
       <ion-label>{{contact.name}}</ion-label>
+    </ion-item> -->
+
+    <ion-item>
+      {{contacts | json}}
     </ion-item>
 
   </ion-list>

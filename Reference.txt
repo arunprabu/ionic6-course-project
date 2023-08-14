@@ -25,9 +25,162 @@ Accessing Device's Native Features
   4. Send SMS
   5. Accessing Wi-Fi Network stuff
 
-Hi Arun,
-Please refer below details to login again incase of you moved out of the session
-Session number: 2660 811 2947
-Registration ID: 309906
-Password:	12!@ssaP
-Thank you :)
+
+CRUD App #1
+---------
+  Ionic Native Integration
+  
+  Testing it in Android Simulator
+  Testing it in iOS Simulator
+
+==============
+ionic-native-app #2 
+---------
+  Camera 
+  GPS
+  Send SMS
+  Accessing Wi-Fi Network stuff
+
+Publishing 
+-----
+  Build 
+  Publishing the App in Google Play 
+  Publishing the App in App Store
+
+=========
+
+
+
+
+Building for iOS and Android 
+=========
+  first of all exec the following cmd
+  -----
+    ionic build 
+    after trying the above cmd, you will get 'www' folder in root of the project
+
+LET'S BUILD for iOS. 
+===============
+  Learn from here 
+    https://ionicframework.com/docs/developing/ios
+  
+  Step 0: Have the necessary softwares
+  -----------------------------------
+    Important: 
+      https://capacitorjs.com/docs/getting-started/environment-setup#ios-requirements
+
+    In order to develop iOS applications using Capacitor, you will need four additional dependencies:
+      Xcode
+      Xcode Command Line Tools
+      Homebrew
+      Cocoapods
+
+    Follow the above article link to install all the necessary softwares
+
+  Step 1:
+  -------
+    Take the build
+      npm run build    
+      the above cmd will generate 'www' folder in your project 
+
+  Step 2:
+  -------
+    Adding the iOS Platform​
+      First, install the @capacitor/ios package.
+      npm install @capacitor/ios
+
+  Step 3:
+  -------
+    Then, add the iOS platform.
+      npx cap add ios
+      the above cmd will give you  'ios' folder.. 
+
+  Step 4:
+  -------
+    Opening the iOS Project​
+      To open the project in Xcode, run:
+      npx cap open ios
+
+      The above command will open the built app in Xcode. 
+      Click on run button in Xcode app. 
+
+      YOUR MOBILE APP WILL RUN IN iOS Simulator. 
+
+    Alternatively, you can open Xcode manually by running:
+      open ios/App/App.xcworkspace
+
+=================
+
+
+LET'S BUILD for Android. 
+=======================
+  Learn from here
+  https://ionicframework.com/docs/developing/android
+
+  Step 0: 
+    Have the necessary softwares
+    Important: 
+      Refer: https://capacitorjs.com/docs/getting-started/environment-setup#android-requirements
+    
+    In order to develop Android applications using Capacitor, you will need two additional dependencies:
+      Android Studio
+      An Android SDK installation v22+
+    Note: 
+      You do not need to separately install the Java Development Kit (JDK). 
+      Android Studio will automatically install the proper JDK for you.
+      Once you've installed the core requirements, as well as an Android SDK 
+      with Android Studio, you'll be able to create both Android applications and PWAs.
+
+    Capacitor 5 requires a minimum of Android Studio 2022.2.1.
+
+    Also, do not forget to initialize Capacitor using the CLI questionnaire 
+    by typing the following cmd
+      npx cap init
+
+  Step 1:
+  -------
+    Take the build
+      npm run build
+      the above cmd will generate 'www' folder in your project 
+
+  Step 2:
+  ------
+    https://capacitorjs.com/docs/android
+    Android Support​
+    API 22+ (Android 5.1 or later) is supported, which represents over 99% of the Android market. Capacitor requires an Android WebView with Chrome version 60 or later. On Android 5-6, and 10+ Capacitor uses the Android System WebView. On Android 7-9, Google Chrome provides the WebView.
+
+    Adding the Android Platform​
+      First, install the @capacitor/android package.
+      npm install @capacitor/android
+
+  Step 3:
+  -------
+    Then, add the Android platform.
+      npx cap add android
+
+    The above cmd will create android folder in root directory of the project.
+    
+  Step 4: 
+  ------
+    Opening the Android Project
+    To open the project in Android Studio, run:
+      npx cap open android
+    
+    Alternatively, you can open Android Studio and import the android/ directory 
+    as an Android Studio project.
+
+  Step 5:
+  -----
+    Running Your App
+      npx cap run android
+  
+  Step5: 
+  ------
+    Then, Select emulator in Android Studio and Click Run button in Android Studio 
+  
+=============
+
+=======
+Testing in Real Android Device
+======
+  https://developer.android.com/studio/debug/dev-options

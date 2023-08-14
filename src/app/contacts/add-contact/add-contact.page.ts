@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ContactsService } from '../contacts.service';
 import { ToastController } from '@ionic/angular';
+import { Contacts, PhoneType, EmailType } from '@capacitor-community/contacts';
 
 @Component({
   selector: 'app-add-contact',
@@ -32,18 +33,48 @@ export class AddContactPage implements OnInit {
       .subscribe(async (res: any) => {
         console.log(res);
         if(res && res.id){
-          // TODO: to trainer Arun
           // save the above contact in Mobile Device's Phone Book
-          // if success show the toast like following 
-          // other show the error in toast
-          const toast = await this.toastCtrl.create({
-            message: 'Contact Saved!',
-            duration: 3000,
-            position: 'bottom',
-            color: 'success'
-          });
-          toast.present();
+          this.saveContactInPhonebook(res);
         }
       })
   }
+
+  async saveContactInPhonebook(contactData: any){
+    const res = await Contacts.createContact({
+      contact: {
+        name: {
+          given: contactData.name,
+          family: '',
+        },
+        phones: [
+          {
+            type: PhoneType.Mobile,
+            label: 'mobile',
+            number: contactData.phone,
+          }
+        ],
+        emails: [
+          {
+            type: EmailType.Work,
+            label: 'work',
+            address: contactData.email,
+          },
+        ]
+      },
+    });
+
+    console.log(res.contactId);
+
+    // if success show the toast like following 
+    // other show the error in toast
+    const toast = await this.toastCtrl.create({
+      message: 'Contact Saved!',
+      duration: 3000,
+      position: 'bottom',
+      color: 'success'
+    });
+    toast.present();
+  } 
+
+
 }
