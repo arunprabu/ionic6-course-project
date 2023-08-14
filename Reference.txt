@@ -26,7 +26,7 @@ Accessing Device's Native Features
   5. Accessing Wi-Fi Network stuff
 
 
-CRUD App #1
+CRUD App #1 [DONE]
 ---------
   Ionic Native Integration
   
@@ -38,14 +38,14 @@ ionic-native-app #2
 ---------
   Camera 
   GPS
-  Send SMS
-  Accessing Wi-Fi Network stuff
+  Send SMS (may be)
+  Accessing Wi-Fi Network stuff 
 
 Publishing 
 -----
-  Build 
-  Publishing the App in Google Play 
-  Publishing the App in App Store
+  Build (partially completed)
+  Publishing the App in Google Play (apk) [DONE]
+  Publishing the App in App Store (app bundle)  
 
 =========
 
