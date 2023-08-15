@@ -184,3 +184,10 @@ LET'S BUILD for Android.
 Testing in Real Android Device
 ======
   https://developer.android.com/studio/debug/dev-options
+
+
+Develop Angular PWA 
+-----
+  https://ionicframework.com/docs/v6/angular/pwa
+  Also read 
+  https://ionic.io/blog/start-build-deploy-your-first-capacitor-pwa-with-ionic
